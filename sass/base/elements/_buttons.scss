@@ -1,21 +1,25 @@
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+    border: 1px solid;
+    border-color: $color__border-button;
+    border-radius: 1.5rem;
+    background: $color__background-button;
+    color: #fff;
+    line-height: 1;
+    padding: 0.8em 1.4em 0.8em;
+    cursor: pointer;
+    text-decoration: none;
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
+    &:hover {
+        border-color: $color__border-button-hover;
+        color: $color__button-text-hover;
+    }
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
+    &:active,
+        &:focus {
+        border-color: $color__border-button-focus;
+    }
 }

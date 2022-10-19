@@ -1,8 +1,27 @@
 .widget {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 
-	// Make sure select elements fit in widgets.
-	select {
-		max-width: 100%;
-	}
+    // Make sure select elements fit in widgets.
+    select {
+        max-width: 100%;
+    }
+    .widget-title{
+        text-align: center;
+    }
+}
+
+// contact form widget
+.widget_contact_form_widget{
+    .form-control{
+        width: 100%;
+    }
+    
+    textarea{
+        height: 8rem;
+    }
+    
+    .button {
+        margin: 0 auto;
+        display: block;
+    }
 }

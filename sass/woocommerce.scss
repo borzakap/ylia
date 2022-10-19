@@ -1,5 +1,5 @@
 /*
-Theme Name: _s
+Theme Name: _ylia
 
 WooCommerce styles override
 */
@@ -41,3 +41,8 @@ $woocommerce__color-info: #3d9cd2;
  * WooCommerce widgets
  */
 @import "plugins/woocommerce/widgets";
+
+/**
+ * WooCommerce cart
+ */
+@import "plugins/woocommerce/cart";

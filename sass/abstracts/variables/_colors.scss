@@ -1,20 +1,32 @@
 $color__background-body: #fff;
+$color__background-header: #000;
+$color__background-footer: #000;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-button: #2F5833;
+$color__background-inputs: #F5F5F5;
+
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
+$color__text-price: #2F5833;
+$color__text-product-title: #000;
 $color__text-input: #666;
-$color__text-input-focus: #111;
-$color__link: #4169e1; //royalblue
+$color__text-input-focus: #2F5833;
+$color__link: #2F5833; //royalblue
 $color__link-visited: #800080; //purple
 $color__link-hover: #191970; //midnightblue
 $color__text-main: #404040;
+$color__link-menu: #fff;
+$color__link-menu-hover: #2F5833;
+$color__link-slider: #fff;
+$color__link-slider-hover: #2F5833;
+$color__button-text-hover: #ccc;
 
-$color__border-button: #ccc #ccc #bbb;
+$color__border-button: #2F5833;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
+$color__border-input-focus: #2F5833;
 $color__border-abbr: #666;
