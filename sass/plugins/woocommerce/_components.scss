@@ -1,24 +1,189 @@
 /**
  * Header cart
  */
-.site-header-cart {
-    position: relative;
-    margin: 0;
-    padding: 0;
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+#cd-cart-trigger{
+    position: fixed;
+    bottom: 0;
+    right: 0;
 
     .cart-contents {
         text-decoration: none;
-    }
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-left: none;
+        background: $color__background-header url(../ylia/images/cd-cart.svg) no-repeat center center;
+        display: block;
 
-    .widget_shopping_cart {
-        display: none;
-    }
-
-    .product_list_widget {
-        margin: 0;
-        padding: 0;
+        .count{
+            background: #fff;
+            padding: 1px 4px 1px 4px;
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            font-size: 0.9rem;
+            display: block;
+            z-index: 998;
+        }
     }
 }
+
+#cd-shadow-layer{
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(67,87,121,.6);
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+
+    &.is-visible{
+        display: block;
+        -webkit-animation: cd-fade-in .3s;
+        -moz-animation: cd-fade-in .3s;
+        animation: cd-fade-in .3s;
+    }
+
+}
+
+#cd-cart {
+    &.speed-in{
+        right: 0;
+    }
+
+    right: -100%;
+    background: #fff;
+    -webkit-transition: right .3s;
+    -moz-transition: right .3s;
+    transition: right .3s;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 320px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    z-index: 999;    
+
+    .cd-cart-items {
+        padding: 0;
+    }
+
+    .cart-title{
+        font-size: .875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 1.3em 1em;
+        position: relative;
+        background: $color__background-header;
+        color: #fff;
+        margin: 0;
+
+        #hide-mini-cart{
+            display: block;
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: #fff;
+        }
+    }
+
+    .widget_shopping_cart{
+        padding: 0 1em;
+
+        .woocommerce-mini-cart__buttons{
+            text-align: center;
+
+            .button{
+                margin: 0 auto;
+                display: block;
+                width: auto;
+
+                &.checkout{
+                    width: 100%;
+                    background: #2f696d;
+                    color: #fff;
+                    padding: 0.5rem 1rem;
+                    text-align: center;
+                    border: 1px solid #ccc;
+
+                    &:hover{
+                        border: 1px solid #2f696d;
+                    }
+                }
+                &.wc-forward{
+                    margin-top: 2rem;
+                }
+
+            }
+        }
+
+        .cart_list{
+            &.product_list_widget{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 2rem;
+
+                .mini-cart-product-container{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;                    
+
+                    .mini-cart-product-img{
+                        width: 32%;
+                    }
+
+                    .mini-cart-product-title{
+                        padding-left: 1rem;
+                        width:68%;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+@-webkit-keyframes cd-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes cd-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes cd-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
 
 /**
  * Star rating
@@ -252,33 +417,6 @@ p.no-comments {
     z-index: 9999;
 }
 
-@media screen and (min-width: 48em) {
-
-    /**
-     * Header cart
-     */
-    .site-header-cart {
-
-        .widget_shopping_cart {
-            position: absolute;
-            top: 100%;
-            width: 100%;
-            z-index: 999999;
-            left: -999em;
-            display: block;
-            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-        }
-
-        &:hover,
-            &.focus {
-
-            .widget_shopping_cart {
-                left: 0;
-                display: block;
-            }
-        }
-    }
-}
 .woocommerce-breadcrumb{
     padding: 1rem 0;
 }

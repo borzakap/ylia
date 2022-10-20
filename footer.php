@@ -31,6 +31,12 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<!-- cart -->
+<?php
+if ( function_exists( 'ylia_woocommerce_header_cart' ) ) {
+    ylia_woocommerce_header_cart();
+}
+?>
 
 </body>
 </html>

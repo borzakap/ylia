@@ -320,23 +320,185 @@ ul.products li.product .woocommerce-Price-amount {
 /**
  * Header cart
  */
-.site-header-cart {
-	position: relative;
-	margin: 0;
-	padding: 0;
+body.overflow-hidden {
+	overflow: hidden;
 }
 
-.site-header-cart .cart-contents {
+#cd-cart-trigger {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+#cd-cart-trigger .cart-contents {
 	text-decoration: none;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border-left: none;
+	background: #000 url(../ylia/images/cd-cart.svg) no-repeat center center;
+	display: block;
 }
 
-.site-header-cart .widget_shopping_cart {
+#cd-cart-trigger .cart-contents .count {
+	background: #fff;
+	padding: 1px 4px 1px 4px;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	font-size: 0.9rem;
+	display: block;
+	z-index: 998;
+}
+
+#cd-shadow-layer {
+	position: fixed;
+	min-height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(67, 87, 121, 0.6);
+	cursor: pointer;
+	z-index: 2;
 	display: none;
 }
 
-.site-header-cart .product_list_widget {
+#cd-shadow-layer.is-visible {
+	display: block;
+	-webkit-animation: cd-fade-in 0.3s;
+	-moz-animation: cd-fade-in 0.3s;
+	animation: cd-fade-in 0.3s;
+}
+
+#cd-cart {
+	right: -100%;
+	background: #fff;
+	-webkit-transition: right 0.3s;
+	-moz-transition: right 0.3s;
+	transition: right 0.3s;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 320px;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	z-index: 999;
+}
+
+#cd-cart.speed-in {
+	right: 0;
+}
+
+#cd-cart .cd-cart-items {
+	padding: 0;
+}
+
+#cd-cart .cart-title {
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 1.3em 1em;
+	position: relative;
+	background: #000;
+	color: #fff;
+	margin: 0;
+}
+
+#cd-cart .cart-title #hide-mini-cart {
+	display: block;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	color: #fff;
+}
+
+#cd-cart .widget_shopping_cart {
+	padding: 0 1em;
+}
+
+#cd-cart .widget_shopping_cart .woocommerce-mini-cart__buttons {
+	text-align: center;
+}
+
+#cd-cart .widget_shopping_cart .woocommerce-mini-cart__buttons .button {
+	margin: 0 auto;
+	display: block;
+	width: auto;
+}
+
+#cd-cart .widget_shopping_cart .woocommerce-mini-cart__buttons .button.checkout {
+	width: 100%;
+	background: #2f696d;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+
+#cd-cart .widget_shopping_cart .woocommerce-mini-cart__buttons .button.checkout:hover {
+	border: 1px solid #2f696d;
+}
+
+#cd-cart .widget_shopping_cart .woocommerce-mini-cart__buttons .button.wc-forward {
+	margin-top: 2rem;
+}
+
+#cd-cart .widget_shopping_cart .cart_list.product_list_widget {
+	list-style: none;
 	margin: 0;
 	padding: 0;
+	margin-bottom: 2rem;
+}
+
+#cd-cart .widget_shopping_cart .cart_list.product_list_widget .mini-cart-product-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+#cd-cart .widget_shopping_cart .cart_list.product_list_widget .mini-cart-product-container .mini-cart-product-img {
+	width: 32%;
+}
+
+#cd-cart .widget_shopping_cart .cart_list.product_list_widget .mini-cart-product-container .mini-cart-product-title {
+	padding-left: 1rem;
+	width: 68%;
+}
+
+@-webkit-keyframes cd-fade-in {
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes cd-fade-in {
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes cd-fade-in {
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 /**
@@ -535,28 +697,6 @@ p.no-comments {
 	padding: 1em;
 	background-color: #3d9cd2;
 	z-index: 9999;
-}
-
-@media screen and (min-width: 48em) {
-
-	/**
-     * Header cart
-     */
-	.site-header-cart .widget_shopping_cart {
-		position: absolute;
-		top: 100%;
-		width: 100%;
-		z-index: 999999;
-		left: -999em;
-		display: block;
-		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	}
-
-	.site-header-cart:hover .widget_shopping_cart,
-	.site-header-cart.focus .widget_shopping_cart {
-		left: 0;
-		display: block;
-	}
 }
 
 .woocommerce-breadcrumb {
