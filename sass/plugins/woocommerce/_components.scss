@@ -393,6 +393,9 @@ p.stars {
 p.no-comments {
     background-color: $woocommerce__color-success;
     clear: both;
+    padding: 1rem 2rem;
+    color: $woocommerce__color-info-text;
+    text-align: center;
 }
 
 .woocommerce-info,

@@ -675,6 +675,9 @@ p.stars.selected a:not(.active)::before {
 p.no-comments {
 	background-color: #0f834d;
 	clear: both;
+	padding: 1rem 2rem;
+	color: #fff;
+	text-align: center;
 }
 
 .woocommerce-info,
