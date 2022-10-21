@@ -1,0 +1,25 @@
+.social-buttons{
+    margin: 2rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    .link a{
+        display: inline-block;
+        border-radius: 50%;
+        padding: 1rem;
+        width: 3rem;
+        height: 3rem;
+        background: $color__background-socials no-repeat center center;
+        margin: 0 0.5rem;
+        &.facebook{
+            background-image: url(../ylia/images/akar-icons_facebook-fill.svg);
+        }
+        &.instagram{
+            background-image: url(../ylia/images/akar-icons_instagram-fill.svg);
+        }
+        &.youtube{
+            background-image: url(../ylia/images/akar-icons_youtube-fill.svg);
+        }
+    }
+}
