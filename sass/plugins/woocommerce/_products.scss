@@ -22,6 +22,14 @@ ul.products {
             clear: both;
             display: block;
         }
+        .sale{
+            .price{
+                bdi{
+                    color: $woocommerce__color-price-sale;
+                    font-size: 1.2rem;
+                }
+            }
+        }
         .button {
             display: inline-block;
         }

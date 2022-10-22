@@ -253,7 +253,7 @@ if (!function_exists('ylia_woocommerce_prodact_categories')) {
 
         $atts = array(
             'limit' => $columns,
-            'columns' => 3,
+            'columns' => 4,
             'parent' => 0,
             'hide_empty' => false,
             'orderby' => 'menu_order',

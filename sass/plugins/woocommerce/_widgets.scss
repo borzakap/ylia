@@ -63,3 +63,16 @@
 		height: 100%;
 	}
 }
+
+// widget categories in main page
+.main-page-categories{
+    a{
+        text-decoration: none;
+        .woocommerce-loop-category__title{
+            text-transform: uppercase;
+            color: $color__text-product-title;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    }
+}
