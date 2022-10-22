@@ -98,7 +98,7 @@ ul.products li.product .price {
 	display: block;
 }
 
-ul.products li.product.sale .price bdi {
+ul.products li.product.sale .price del bdi {
 	color: #ccc;
 	font-size: 1.2rem;
 }
@@ -294,7 +294,7 @@ ul.products li.product .woocommerce-Price-amount {
 	clear: both;
 }
 
-.single-product div.product.sale .price bdi {
+.single-product div.product.sale .price del bdi {
 	color: #ccc;
 	font-size: 1.5rem;
 }

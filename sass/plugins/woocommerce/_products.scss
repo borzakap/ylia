@@ -24,7 +24,7 @@ ul.products {
         }
         &.sale{
             .price{
-                bdi{
+                del bdi{
                     color: $woocommerce__color-price-sale;
                     font-size: 1.2rem;
                 }

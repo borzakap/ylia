@@ -96,8 +96,8 @@
         }
         &.sale{
             .price{
-                bdi{
-                    color: #ccc;
+                del bdi{
+                    color: $woocommerce__color-price-sale;
                     font-size: 1.5rem;
                 }
             }
