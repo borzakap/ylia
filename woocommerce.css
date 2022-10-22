@@ -98,9 +98,18 @@ ul.products li.product .price {
 	display: block;
 }
 
-ul.products li.product .sale .price bdi {
+ul.products li.product.sale .price bdi {
 	color: #ccc;
 	font-size: 1.2rem;
+}
+
+ul.products li.product.sale .onsale {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #fff;
+	padding: 1rem;
+	border-radius: 0 0 0 2rem;
 }
 
 ul.products li.product .button {
@@ -283,6 +292,11 @@ ul.products li.product .woocommerce-Price-amount {
 
 .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li:nth-child(5n+1) {
 	clear: both;
+}
+
+.single-product div.product.sale .price bdi {
+	color: #ccc;
+	font-size: 1.5rem;
 }
 
 .stock:empty::before {

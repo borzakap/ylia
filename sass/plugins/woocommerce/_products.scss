@@ -22,12 +22,20 @@ ul.products {
             clear: both;
             display: block;
         }
-        .sale{
+        &.sale{
             .price{
                 bdi{
                     color: $woocommerce__color-price-sale;
                     font-size: 1.2rem;
                 }
+            }
+            .onsale{
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: #fff;
+                padding: 1rem;
+                border-radius: 0 0 0 2rem;
             }
         }
         .button {

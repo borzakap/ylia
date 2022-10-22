@@ -94,6 +94,14 @@
                 }
             }
         }
+        &.sale{
+            .price{
+                bdi{
+                    color: #ccc;
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 }
 
