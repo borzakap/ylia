@@ -49,9 +49,7 @@ get_header();
             <section class="page-front">
                 <div class="section-cover">
                     <div class="container">
-                        <div class="row">
-                            <h2 class="col-md-12"><?= apply_filters('post_title', $p->post_title) ?></h2>
-                        </div>
+                        <h2 class="main-page-header"><?= apply_filters('post_title', $p->post_title) ?></h2>
                         <div class="row">
                             <div class="col-md-3">
                             <?= get_the_post_thumbnail( $p->ID, 'thumbnail' ); ?>
