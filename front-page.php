@@ -44,6 +44,26 @@ get_header();
                     </div>
                 </div>
             </section>
+            <?php if(get_option( 'show_on_front' ) == 'page' ) : 
+                $p = get_page(get_option( 'page_on_front' )); ?>
+            <section class="page-front">
+                <div class="section-cover">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="col-md-12"><?= apply_filters('post_title', $p->post_title) ?></h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                            <?= get_the_post_thumbnail( $p->ID, 'thumbnail' ); ?>
+                            </div>
+                            <div class="col-md-9">
+                            <?= apply_filters('the_content', $p->post_content); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <?php endif; ?>
             <?php
                 dynamic_sidebar( 'home-sidebar-1' );
                 dynamic_sidebar( 'home-sidebar-2' );
