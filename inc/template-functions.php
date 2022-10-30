@@ -89,6 +89,60 @@ function ylia_slider_post_type() {
 add_action( 'init', 'ylia_slider_post_type', 0 );
 
 /**
+ * Add cutom paget type for loyers
+ */
+function ylia_information_post_type() {
+ 
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Informations', 'Informations', 'ylia' ),
+        'singular_name'       => _x( 'Information', 'Information', 'ylia' ),
+        'menu_name'           => __( 'Informations', 'ylia' ),
+        'parent_item_colon'   => __( 'Parent information', 'ylia' ),
+        'all_items'           => __( 'All informations', 'ylia' ),
+        'view_item'           => __( 'View information', 'ylia' ),
+        'add_new_item'        => __( 'Add New information', 'ylia' ),
+        'add_new'             => __( 'Add New', 'ylia' ),
+        'edit_item'           => __( 'Edit information', 'ylia' ),
+        'update_item'         => __( 'Update information', 'ylia' ),
+        'search_items'        => __( 'Search information', 'ylia' ),
+        'not_found'           => __( 'Not Found', 'ylia' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'ylia' ),
+    );
+     
+    // Set other options for Custom Post Type
+    $args = array(
+        'label'               => __( 'information', 'ylia' ),
+        'description'         => __( 'Informations', 'ylia' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'editor'),
+        'taxonomies'          => array( 'informations' ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'informations'),
+        'menu_icon' => 'dashicons-businessman',
+ 
+    );
+     
+    register_post_type( 'information', $args );
+ 
+}
+
+add_action( 'init', 'ylia_information_post_type', 0 );
+
+
+/**
  * make the request to send phone callback
  */
 function ylia_make_callback(){
