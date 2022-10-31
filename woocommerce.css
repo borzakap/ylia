@@ -76,7 +76,7 @@ ul.products {
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: left;
 }
 
 ul.products li.product {
@@ -118,6 +118,10 @@ ul.products li.product .button {
 
 ul.products li.product .woocommerce-loop-product__title {
 	color: #000;
+	line-height: 1.2;
+	font-weight: 500;
+	font-size: 1.2rem;
+	text-transform: uppercase;
 }
 
 ul.products li.product .woocommerce-loop-product__link {
