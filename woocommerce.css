@@ -61,6 +61,7 @@ table.shop_table_responsive tr td.download-actions .button {
 
 	table.shop_table_responsive tr td {
 		display: table-cell;
+		padding: 0.5rem;
 	}
 
 	table.shop_table_responsive tr td::before {
@@ -334,6 +335,10 @@ ul.products li.product .woocommerce-Price-amount {
 	.col2-set .form-row-last {
 		width: 48.1%;
 	}
+}
+
+.woocommerce-checkout-review-order-table .woocommerce-Price-amount {
+	font-size: 1.2rem;
 }
 
 /**
@@ -822,4 +827,8 @@ p.no-comments {
 .cart .woocommerce-Price-amount,
 .cart_totals .woocommerce-Price-amount {
 	font-size: 1.5rem;
+}
+
+.woocommerce-cart-form .product-quantity .quantity {
+	max-width: 5rem;
 }

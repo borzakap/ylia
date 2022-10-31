@@ -8,6 +8,7 @@ textarea {
 	font-family: $font__main;
 	font-size: 1rem;
 	line-height: $font__line-height-body;
+        max-width: 100%;
 }
 
 @import "headings";
