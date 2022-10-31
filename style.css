@@ -2153,9 +2153,9 @@ textarea {
 	border: 1px solid #f5f5f5;
 }
 
-.page-numbers li span .current,
+.page-numbers li span.current,
 .page-numbers li span:hover,
-.page-numbers li a .current,
+.page-numbers li a.current,
 .page-numbers li a:hover {
 	background-color: #2f5833;
 	color: #ccc;

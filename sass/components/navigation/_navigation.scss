@@ -162,7 +162,7 @@
             padding: 0.8rem 1.2rem;
             text-decoration: none;
             border: 1px solid $color__background-inputs;
-            .current, &:hover{
+            &.current, &:hover{
                 background-color: $color__background-button;
                 color: $color__button-text-hover;
             }
