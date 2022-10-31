@@ -150,3 +150,12 @@
         flex: 1 0 50%;
     }
 }
+.page-numbers{
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        float: left;
+    }
+}

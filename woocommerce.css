@@ -730,6 +730,10 @@ p.no-comments {
 	color: #2f5833;
 }
 
+.woocommerce-pagination {
+	text-align: center;
+}
+
 /**
  * WooCommerce widgets
  */
