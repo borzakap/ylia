@@ -110,6 +110,73 @@ function ylia_customize_register($wp_customize) {
             )
     );
     
+    /**
+     * Address 
+     */
+    $wp_customize->add_setting(
+            'contact_address',
+            array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+                'transport' => 'postMessage',
+            )
+    );
+
+    $wp_customize->add_control(
+            'contact_address',
+            array(
+                'label' => __('Address in footer', 'fijis'),
+                'section' => 'pannel_contacts',
+                'type' => 'text',
+                'description' => __('Insert your local address here', 'fijis'),
+            )
+    );
+
+    /**
+     * Email 
+     */
+    $wp_customize->add_setting(
+            'contact_email',
+            array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_email',
+                'transport' => 'postMessage',
+            )
+    );
+
+    $wp_customize->add_control(
+            'contact_email',
+            array(
+                'label' => __('Email address in footer', 'fijis'),
+                'section' => 'pannel_contacts',
+                'type' => 'text',
+                'description' => __('Insert your email address here', 'fijis'),
+            )
+    );
+
+    /**
+     * Phone number 
+     */
+    $wp_customize->add_setting(
+            'contact_phone',
+            array(
+                'default' => '',
+                'sanitize_callback' => 'wc_sanitize_phone_number',
+                'transport' => 'postMessage',
+            )
+    );
+
+    $wp_customize->add_control(
+            'contact_phone',
+            array(
+                'label' => __('Phone number in footer', 'fijis'),
+                'section' => 'pannel_contacts',
+                'type' => 'text',
+                'description' => __('Insert your phone number here', 'fijis'),
+            )
+    );
+    
+    
 }
 
 add_action('customize_register', 'ylia_customize_register');

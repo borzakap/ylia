@@ -38,7 +38,19 @@
                     </div>
                     <div class="col-md-3 col-xs-12"></div>
                     <div class="col-md-3 col-xs-12"></div>
-                    <div class="col-md-3 col-xs-12"></div>
+                    <div class="col-md-3 col-xs-12">
+                        <ul class="address-footer">
+                            <?php if($contact_address = get_theme_mod('contact_address')) : ?>
+                            <li class="location"><?= $contact_address ?></li>
+                            <?php endif; ?>
+                            <?php if($contact_email = get_theme_mod('contact_email')) : ?>
+                            <li class="location"><a href="mailto:<?= $contact_email ?>"><?= $contact_email ?></a></li>
+                            <?php endif; ?>
+                            <?php if($contact_phone = get_theme_mod('contact_phone')) : ?>
+                            <li class="location"><a href="tel:<?= $contact_phone ?>"><?= $contact_phone ?></a></li>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
                 </div>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ylia' ) ); ?>">

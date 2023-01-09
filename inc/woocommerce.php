@@ -179,6 +179,10 @@ if (!function_exists('ylia_woocommerce_cart_link_fragment')) {
 
 }
 add_filter('woocommerce_add_to_cart_fragments', 'ylia_woocommerce_cart_link_fragment');
+// Remove the category count for WooCommerce categories
+add_filter( 'woocommerce_subcategory_count_html', '__return_null' );
+// remove ordering
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
 if (!function_exists('ylia_woocommerce_cart_link')) {
 

@@ -425,6 +425,10 @@ h6 {
 	font-size: 2.5rem;
 }
 
+.main-page-categories .entry-title {
+	text-align: center;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -545,10 +549,6 @@ table {
 --------------------------------------------- */
 a {
 	color: #2f5833;
-}
-
-a:visited {
-	color: #800080;
 }
 
 a:hover,
@@ -691,6 +691,20 @@ textarea {
 
 .site-footer {
 	background-color: #000;
+}
+
+.site-footer .address-footer {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+}
+
+.site-footer .address-footer a,
+.site-footer .address-footer .location {
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
 }
 
 /* greed

@@ -116,7 +116,7 @@ function ylia_information_post_type() {
         'description'         => __( 'Informations', 'ylia' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'excerpt', 'thumbnail', 'revisions', 'custom-fields', 'editor'),
-        'taxonomies'          => array( 'informations' ),
+        'taxonomies'          => array( 'information' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,

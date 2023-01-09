@@ -1,19 +1,19 @@
 <?php
 
 /**
- * khmarska lawerys widget
+ * ylia lawerys widget
  *
  * @author alexey
- * @package khmarska
+ * @package ylia
  */
 class Contact_Form_Widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
                 'contact_form_widget',
-                __('Contact Form', 'khmarska'),
+                __('Contact Form', 'ylia'),
                 array(
-                    'description' => __('Show the form', 'khmarska'),
+                    'description' => __('Show the form', 'ylia'),
                 )
         );
     }

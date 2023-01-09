@@ -9,7 +9,7 @@
 
 if ( ! defined( '_YLIA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_YLIA_VERSION', '1.0.0' );
+	define( '_YLIA_VERSION', '1.0.1' );
 }
 
 /**
@@ -45,6 +45,7 @@ function ylia_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 450, 450, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

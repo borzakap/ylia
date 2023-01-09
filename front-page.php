@@ -38,7 +38,7 @@ get_header();
             <!-- prodact categories -->
             <section class="product-categories">
                 <div class="container">
-                    <h2 class="main-page-header"><?= __('Main Categories','ylia') ?></h2>
+                    <h2 class="main-page-header"><?= __('Наші товари','ylia') ?></h2>
                     <div class="main-page-categories">
                         <?php ylia_woocommerce_prodact_categories(); ?>
                     </div>
@@ -62,6 +62,28 @@ get_header();
                 </div>
             </section>
             <?php endif; ?>
+            <section>
+                <div class="container">
+                    <h2 class="main-page-header"><?= __('Інформація','ylia') ?></h2>
+                    <div class="main-page-categories row">
+                        <?php
+                        $info_args = array(
+                            'post_type' => 'information',
+                            'order' => 'ASC',
+                            'posts_per_page' => 3,
+                        );
+
+                        $infos = new WP_Query($info_args);
+
+                        while($infos->have_posts()) : 
+                            $infos->the_post();
+                            get_template_part('template-parts/content', 'information');
+                        endwhile;
+                        wp_reset_postdata();
+                        ?>
+                    </div>
+                </div>
+            </section>
             <?php
                 dynamic_sidebar( 'home-sidebar-1' );
                 dynamic_sidebar( 'home-sidebar-2' );
